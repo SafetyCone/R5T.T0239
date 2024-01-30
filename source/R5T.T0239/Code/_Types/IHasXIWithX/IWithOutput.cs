@@ -7,9 +7,9 @@ using R5T.T0240;
 namespace R5T.T0239
 {
     [WithXMarker, DataTypeMarker]
-    public interface IWithDirectoryPath :
-        IHasDirectoryPath
+    public interface IWithOutput<TOutput> :
+        IHasOutput<TOutput>
     {
-        new string DirectoryPath { get; set; }
+        new TOutput Output { get; set; }
     }
 }
